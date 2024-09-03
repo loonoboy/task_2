@@ -4,6 +4,7 @@ from datetime import datetime
 import argparse
 import sys
 
+#создание графика
 def plot_graph(data, title, lb1, lb2):
     df = pd.read_csv(data, names=['time', 'temp1', 'temp2'], sep=';')
     df['time'] = df['time'].apply(lambda x: datetime.strptime(x, '%Y-%m-%d'))
@@ -17,6 +18,7 @@ def plot_graph(data, title, lb1, lb2):
     plt.show()
     plt.close()
 
+#парсер строки консоли
 def createParser ():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data', type=str, default='data1.csv', help='Путь к файлу данных')
