@@ -21,7 +21,7 @@ def plot_graph(data, title, lb1, lb2):
 #парсер строки консоли
 def createParser ():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', type=str, default='data1.csv', help='Путь к файлу данных')
+    parser.add_argument('--data', type=str, required=True, help='Путь к файлу данных')
     parser.add_argument('--title', type=str, default='Изменение температуры', help='Заголовок графика')
     parser.add_argument('--sensor_1', type=str, default='Датчик 1', help='Наименование 1 датчика')
     parser.add_argument('--sensor_2', type=str, default='Датчик 2', help='Наименование 2 датчика')
